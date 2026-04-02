@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="80 70 360 380" fill="none">
+  <defs>
+    <linearGradient id="gradLeft" x1="120" y1="420" x2="270" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14D4C7"/>
+      <stop offset="55%" stop-color="#22B7F0"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="gradRight" x1="275" y1="110" x2="400" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="45%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#3B00D9"/>
+    </linearGradient>
+    <linearGradient id="gradCross" x1="135" y1="355" x2="355" y2="285" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#58E3C6"/>
+      <stop offset="50%" stop-color="#32BFF5"/>
+      <stop offset="100%" stop-color="#5B21F3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- left stroke -->
+  <path d="M130 408
+           C132 402, 138 392, 147 376
+           L259 156
+           C268 138, 277 126, 288 126
+           C299 126, 307 132, 311 141
+           C315 150, 314 161, 307 176
+           L208 381
+           C201 395, 193 405, 181 411
+           C165 420, 145 420, 136 416
+           C131 414, 128 411, 130 408Z"
+        fill="url(#gradLeft)"/>
+
+  <!-- right stroke -->
+  <path d="M287 126
+           C298 126, 306 132, 315 146
+           L392 281
+           C397 290, 401 299, 401 307
+           C401 313, 397 317, 388 317
+           L309 317
+           C297 317, 291 312, 285 301
+           L252 239
+           C246 227, 245 219, 248 209
+           C250 200, 257 188, 267 172
+           L274 159
+           C278 150, 281 143, 283 137
+           C284 132, 285 128, 287 126Z"
+        fill="url(#gradRight)"/>
+
+  <!-- bottom right leg -->
+  <path d="M297 307
+           L396 307
+           C404 307, 410 311, 414 319
+           C419 329, 419 341, 412 354
+           L389 399
+           C383 411, 374 416, 361 416
+           C355 416, 347 414, 339 411
+           L245 377
+           C229 371, 223 360, 228 347
+           C232 336, 243 329, 261 323
+           L297 307Z"
+        fill="url(#gradRight)"/>
+
+  <!-- cross sweep -->
+  <path d="M135 408
+           C152 405, 178 397, 212 384
+           C248 370, 288 353, 333 339
+           C360 331, 380 326, 392 326
+           C401 326, 407 328, 409 333
+           C411 338, 408 344, 400 351
+           C391 358, 379 365, 362 374
+           C334 389, 299 401, 258 411
+           C220 420, 188 425, 163 425
+           C149 425, 139 423, 133 419
+           C129 416, 129 411, 135 408Z"
+        fill="url(#gradCross)"/>
+</svg>
