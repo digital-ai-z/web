@@ -64,15 +64,4 @@ if (modal && modalContent && closeModal) {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('active')) close();
   });
-
-  // Listen for language changes to update the modal content if it's open
-  const btn = document.getElementById('lang-toggle');
-  if (btn) {
-    btn.addEventListener('click', () => {
-      if (modal.classList.contains('active')) {
-        const currentType = modalContent.dataset.type || 'impressum';
-        loadContent(currentType);
-      }
-    });
-  }
 }

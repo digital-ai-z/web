@@ -22,32 +22,3 @@ const revealOnScroll = () => {
 };
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
-
-// Language switching logic
-const langToggle = document.getElementById('lang-toggle');
-if (langToggle) {
-  langToggle.addEventListener('click', () => {
-    const isDe = document.documentElement.classList.contains('lang-de');
-    if (isDe) {
-      document.documentElement.classList.remove('lang-de');
-      document.documentElement.classList.add('lang-en');
-      document.documentElement.lang = 'en';
-      langToggle.textContent = 'DE';
-      document.title = "Digital AI-Z — IT Consulting, Software Development & AI Integration";
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.content = "Digital AI-Z: Experts in IT consulting, software development, and AI integration. We support companies in their digital transformation with tailor-made solutions.";
-      }
-    } else {
-      document.documentElement.classList.remove('lang-en');
-      document.documentElement.classList.add('lang-de');
-      document.documentElement.lang = 'de';
-      langToggle.textContent = 'EN';
-      document.title = "Digital AI-Z — IT-Beratung, Softwareentwicklung & KI-Integration";
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.content = "Digital AI-Z: Experten für IT-Beratung, Softwareentwicklung und KI-Integration. Wir unterstützen Unternehmen bei der digitalen Transformation mit maßgeschneiderten Lösungen.";
-      }
-    }
-  });
-}
