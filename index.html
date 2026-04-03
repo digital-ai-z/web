@@ -15,7 +15,7 @@
   <meta property="og:image" content="https://digital-ai-z.de/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="modal.css" />
 
@@ -31,7 +31,7 @@
         "url": "https://digital-ai-z.de/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://digital-ai-z.de/logo.png"
+          "url": "https://digital-ai-z.de/assets/images/logo.png"
         },
         "contactPoint": {
           "@type": "ContactPoint",
@@ -46,7 +46,7 @@
         "@id": "https://digital-ai-z.de/#localbusiness",
         "name": "Digital AI-Z GbR",
         "url": "https://digital-ai-z.de/",
-        "image": "https://digital-ai-z.de/logo.png",
+        "image": "https://digital-ai-z.de/assets/images/logo.png",
         "telephone": "+49-173-5227934",
         "address": {
           "@type": "PostalAddress",
@@ -153,7 +153,7 @@
           aria-label="Switch to English"
           href="en/"
         >
-          <img class="flag-icon" src="en/flag-en.svg" alt="" aria-hidden="true">
+          <img class="flag-icon" src="assets/images/flag-en.svg" alt="" aria-hidden="true">
           EN
         </a>
         <a class="nav-cta" href="#cta">
@@ -216,24 +216,65 @@
     <div class="visual-panel">
       <div class="visual-card reveal">
         <div class="visual-card-text">
-          <h2>
-            Ganzheitliche digitale Transformation
+          <span class="eyebrow">Strategie · Architektur · Integration</span>
+          <h2 class="reveal">
+            Digitalisierung mit klarer Struktur und messbarem Mehrwert
           </h2>
-          <p>
-            Wir verstehen Digitalisierung nicht als Projekt, sondern als Wettbewerbsvorteil. Von der ersten strategischen Beratung bis zum stabilen Produktivbetrieb begleiten wir Sie mit technischer Exzellenz und unternehmerischem Weitblick.
+          <p class="visual-lead reveal">
+            Wir begleiten Unternehmen von der strategischen Einordnung bis zur tragfähigen Umsetzung — mit Fokus auf sinnvolle Lösungen, saubere Architektur und nachhaltige Entscheidungen.
           </p>
-          <ul class="card-pills">
-            <li>Strategische IT- und Digitalisierungsberatung</li>
-            <li>Auswahl und Einführung passender Standardlösungen</li>
-            <li>Software-/Integrationsarchitektur</li>
-            <li>Custom Development wo Standardlösungen nicht reichen</li>
-            <li>KI-Einführung mit Business-Fokus</li>
-            <li>Steuerung externer Umsetzungspartner</li>
-            <li>Legacy Modernisierung</li>
-          </ul>
-          <p class="card-note">
-            Maßgeschneiderte Lösungen, die mit Ihrem Unternehmen wachsen.
-          </p>
+
+          <div class="visual-groups">
+            <!-- Gruppe 1 -->
+            <div class="visual-group-card reveal">
+              <h3>Strategie & Steuerung</h3>
+              <p class="group-desc">Für klare Entscheidungen, passende Lösungen und kontrollierte Umsetzung.</p>
+              
+              <div class="group-items">
+                <div class="group-item">
+                  <span class="item-title">Strategische IT- und Digitalisierungsberatung</span>
+                  <span class="item-detail">Zielbild, Roadmap, Make-or-Buy</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Auswahl und Einführung passender Standardlösungen</span>
+                  <span class="item-detail">Passende Systeme statt unnötiger Eigenentwicklung</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">KI-Einführung mit klarem Business-Fokus</span>
+                  <span class="item-detail">Reale Anwendungsfälle statt Buzzwords</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Steuerung und Qualitätssicherung externer Umsetzungspartner</span>
+                  <span class="item-detail">Qualität, Transparenz und belastbare Ergebnisse</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gruppe 2 -->
+            <div class="visual-group-card reveal" style="transition-delay: 0.1s">
+              <h3>Architektur & Umsetzung</h3>
+              <p class="group-desc">Für stabile Systemlandschaften, Integration und gezielte Individualisierung.</p>
+              
+              <div class="group-items">
+                <div class="group-item">
+                  <span class="item-title">Architektur für Software und Systemintegration</span>
+                  <span class="item-detail">Skalierbare, saubere Systemlandschaften</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Gezielte Individualentwicklung</span>
+                  <span class="item-detail">Nur dort, wo Standardlösungen nicht ausreichen</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Cloud- und On-Premise-Architektur</span>
+                  <span class="item-detail">Passende Infrastrukturstrategie statt One-Size-Fits-All</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Modernisierung bestehender Systeme (Legacy)</span>
+                  <span class="item-detail">Bestehende Systeme weiterentwickeln statt blind ersetzen</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -248,21 +289,20 @@
       <h2 class="section-title reveal">
         Gebaut für die Art,<br>wie Sie arbeiten.
       </h2>
-
       <div class="services-grid">
         <div class="service-card blue reveal">
           <div class="service-icon blue">🧭</div>
           <h3>IT-Beratung</h3>
           <p>
-            Wir analysieren Ihre Systemlandschaft, identifizieren Engpässe und entwickeln eine klare Technologie-Roadmap — passgenau zu Ihren Unternehmenszielen. Kein Vendor Lock-in, kein Blabla.
+            Viele Digitalisierungsprojekte scheitern an falschen Entscheidungen zu Beginn. Wir helfen Ihnen, passende und nachhaltige Lösungen zu finden — statt vorschnell auf Standardsoftware oder teure Eigenentwicklungen zu setzen. Mit klarem Blick für Wirtschaftlichkeit, Umsetzbarkeit und langfristigen Nutzen.
           </p>
         </div>
 
         <div class="service-card purple reveal" style="transition-delay:0.08s">
           <div class="service-icon purple">⚙️</div>
-          <h3>Softwareentwicklung</h3>
+          <h3>Software &amp; Lösungen</h3>
           <p>
-            Individuelle Anwendungen nach Ihren Anforderungen — skalierbar, wartbar und pünktlich geliefert. Software, die Ihr Team eigenständig weiterentwickeln kann.
+            Wo Standardlösungen nicht ausreichen, entwickeln wir gezielte individuelle Anwendungen. In vielen Fällen führen pragmatische Kompromisse schneller zum Ziel — in anderen schaffen maßgeschneiderte Lösungen echte Wettbewerbsvorteile. Wir finden die richtige Balance.
           </p>
         </div>
 
@@ -270,15 +310,15 @@
           <div class="service-icon green">🤖</div>
           <h3>KI-Integration</h3>
           <p>
-            Wir bringen maschinelles Lernen und Large Language Models in Ihre bestehenden Workflows. Von der Modellauswahl bis zum produktiven Betrieb — alles aus einer Hand.
+            Wir identifizieren sinnvolle Einsatzmöglichkeiten für KI und integrieren diese in Ihre bestehenden Abläufe. Der Fokus liegt auf realem Mehrwert statt experimentellen Einzellösungen.
           </p>
         </div>
 
         <div class="service-card orange reveal" style="transition-delay:0.24s">
           <div class="service-icon orange">🔗</div>
-          <h3>Unternehmensintegration</h3>
+          <h3>Systemintegration</h3>
           <p>
-            ERP, CRM und Drittsysteme zu einem zuverlässigen Datenfluss verbinden. Wir bieten passende Lösungen für Unternehmen jeder Größe — von der ersten Systemintegration bis zur komplexen Middleware-Architektur.
+            Wir verbinden Ihre bestehenden Systeme zu einer konsistenten Gesamtarchitektur. So entstehen durchgängige Prozesse, saubere Datenflüsse und die Basis für Automatisierung und Skalierung.
           </p>
         </div>
       </div>
@@ -291,11 +331,13 @@
       <p class="section-eyebrow reveal">
         Unser Ansatz
       </p>
+
       <h2 class="intro-headline reveal">
-        Strategisches Denken.<br>Taktische Umsetzung.
+        Strategisch denken.<br>Pragmatisch umsetzen.
       </h2>
+
       <p class="intro-body reveal">
-        Wir arbeiten an der Schnittstelle von Geschäftsstrategie und technischer Umsetzung — damit jede Lösung, die wir entwickeln, vom ersten Tag an messbaren Mehrwert schafft.
+        Wir arbeiten an der Schnittstelle von Geschäftsstrategie und technischer Umsetzung — mit dem Anspruch, die richtigen Entscheidungen zu treffen, bevor umgesetzt wird. So entstehen Lösungen, die nicht nur funktionieren, sondern echten Mehrwert liefern.
       </p>
 
       <div class="feature-grid">
@@ -303,31 +345,31 @@
           <span class="fi-number">01</span>
           <h3>Business-First</h3>
           <p>
-            Jede technische Entscheidung wird auf ein Unternehmensziel zurückgeführt. Wir sprechen die Sprache Ihrer Stakeholder und übersetzen Strategie in funktionierende Software.
+            Technologie ist kein Selbstzweck. Jede Entscheidung muss wirtschaftlich sinnvoll sein und auf ein konkretes Unternehmensziel einzahlen. Wir denken in Ergebnissen, nicht in Tools.
           </p>
         </div>
 
         <div class="feature-item reveal" style="transition-delay:0.1s">
           <span class="fi-number">02</span>
-          <h3>Lean &amp; präzise</h3>
+          <h3>Pragmatische Lösungen</h3>
           <p>
-            Wir arbeiten schnell, ohne technische Schulden zu erzeugen. Scope ist klar definiert, Qualitätsgates sind transparent, und Lieferergebnisse sind produktionsreif — keine Prototypen.
+            Nicht jede Herausforderung erfordert die perfekte Lösung. Oft führen durchdachte Kompromisse schneller und effizienter zum Ziel. Wo nötig, gehen wir bewusst tiefer — aber immer mit klarem Nutzen.
           </p>
         </div>
 
         <div class="feature-item reveal" style="transition-delay:0.2s">
           <span class="fi-number">03</span>
-          <h3>Wissenstransfer</h3>
+          <h3>Saubere Entscheidungen</h3>
           <p>
-            Wir schaffen keine Abhängigkeit. Neben jedem Projekt dokumentieren, schulen und übergeben wir — damit Ihr Team nach unserem Einsatz kompetenter ist als zuvor.
+            Wir vermeiden vorschnelle Festlegungen auf Tools oder Technologien. Ob Standardlösung, individuelle Entwicklung oder Kombination — wir wählen bewusst, was langfristig trägt.
           </p>
         </div>
 
         <div class="feature-item reveal" style="transition-delay:0.3s">
           <span class="fi-number">04</span>
-          <h3>Langfristige Partnerschaft</h3>
+          <h3>Unabhängigkeit &amp; Nachhaltigkeit</h3>
           <p>
-            Beziehungen zählen mehr als Transaktionen. Viele Kunden kommen wieder — weil sie wissen, dass wir erreichbar, verantwortlich und in ihren Erfolg investiert bleiben.
+            Wir schaffen keine Abhängigkeiten. Durch klare Architektur, Dokumentation und Wissenstransfer stellen wir sicher, dass Ihr Team langfristig eigenständig und handlungsfähig bleibt.
           </p>
         </div>
       </div>
@@ -405,15 +447,43 @@
     <!-- CTA                                                             -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section id="cta">
-      <h2 class="reveal">
-        Bereit, etwas Dauerhaftes zu bauen?
-      </h2>
-      <p class="reveal">
-        Erzählen Sie uns von Ihrem Projekt. Kein Commitment, kein Sales-Pitch — nur ein echtes Gespräch über das, was möglich ist.
-      </p>
-      <a class="btn-primary reveal" href="mailto:hello@digital-ai-z.de">
-        Gespräch starten
-      </a>
+      <div class="cta-overlay"></div>
+
+      <div class="cta-content">
+        <h2 class="reveal">
+          Lassen Sie uns über Ihr Vorhaben sprechen
+        </h2>
+
+        <p class="reveal">
+          Unverbindlich, pragmatisch und auf den Punkt. Wir besprechen Ihre Ausgangslage,
+          mögliche Optionen und den sinnvollsten nächsten Schritt.
+        </p>
+
+        <div class="cta-actions reveal">
+          <a class="btn-primary" href="mailto:hello@digital-ai-z.de?subject=Projektanfrage">
+            E-Mail schreiben
+          </a>
+        </div>
+
+        <div class="cta-contact-links reveal">
+          <a href="tel:+491234567890" class="contact-btn">
+            <img src="assets/images/icon-phone.svg" alt="" class="contact-icon" aria-hidden="true">
+            +49 123 4567890
+          </a>
+          <a href="mailto:hello@digital-ai-z.de" class="contact-btn">
+            <img src="assets/images/icon-mail.svg" alt="" class="contact-icon" aria-hidden="true">
+            hello@digital-ai-z.de
+          </a>
+          <a href="https://www.linkedin.com/company/digital-ai-z/" target="_blank" rel="noopener" class="contact-btn">
+            <img src="assets/images/icon-linkedin.svg" alt="" class="contact-icon" aria-hidden="true">
+            LinkedIn
+          </a>
+        </div>
+
+        <p class="cta-note reveal">
+          In der Regel erhalten Sie innerhalb von 24 Stunden eine Rückmeldung.
+        </p>
+      </div>
     </section>
   </main>
 
@@ -487,6 +557,9 @@
         </div>
       </div>
 
+      <!-- Calendly widget -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async defer></script>
       <script src="main.js" defer></script>
       <script src="modal.js" defer></script>
     </body>

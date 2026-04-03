@@ -22,3 +22,17 @@ const revealOnScroll = () => {
 };
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
+
+// Calendly Integration
+window.addEventListener('load', function() {
+  if (window.Calendly) {
+    const isEn = window.location.pathname.includes('/en/');
+    Calendly.initBadgeWidget({
+      url: 'https://calendly.com/digitalaiz-rauls',
+      text: isEn ? 'Schedule a call' : 'Termin vereinbaren',
+      color: '#2dd4bf',
+      textColor: '#080808',
+      branding: false
+    });
+  }
+});

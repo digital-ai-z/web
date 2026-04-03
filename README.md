@@ -31,18 +31,21 @@ Total footprint: **~80 KB uncompressed** (all assets and legal pages included).
 
 ```
 /
-├── index.html       # Main landing page (Bilingual DE + EN)
-├── styles.css       # Core layout, themes, and global animations
-├── main.js          # Entry point and initialization
-├── ui.js            # UI logic (Nav scroll, reveal, language toggle)
-├── modal.js         # Dynamic legal content loader (Fetch API)
-├── modal.css        # Styles for the legal content and modal overlay
-├── robots.txt       # Crawler instructions
-├── sitemap.xml      # SEO indexing map
-├── de/              # German localized content
+├── index.html           # Main landing page (German)
+├── en/                  # English localized content
+│   └── index.html       # English entry point
+├── assets/
+│   └── images/          # Shared images, icons, and flags
+├── styles.css           # Core layout, themes, and global animations
+├── main.js              # Entry point and initialization
+├── modal.js             # Dynamic legal content loader (Fetch API)
+├── modal.css            # Styles for the legal content and modal overlay
+├── robots.txt           # Crawler instructions
+├── sitemap.xml          # SEO indexing map
+├── de/                  # German localized legal pages
 │   ├── impressum.html
 │   └── datenschutz.html
-└── en/              # English localized content
+└── en/                  # English localized legal pages
     ├── impressum.html
     └── datenschutz.html
 ```

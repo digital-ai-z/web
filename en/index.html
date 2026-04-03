@@ -15,7 +15,7 @@
   <meta property="og:image" content="https://digital-ai-z.de/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../modal.css" />
 
@@ -31,7 +31,7 @@
         "url": "https://digital-ai-z.de/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://digital-ai-z.de/logo.png"
+          "url": "https://digital-ai-z.de/assets/images/logo.png"
         },
         "contactPoint": {
           "@type": "ContactPoint",
@@ -46,7 +46,7 @@
         "@id": "https://digital-ai-z.de/#localbusiness",
         "name": "Digital AI-Z GbR",
         "url": "https://digital-ai-z.de/",
-        "image": "https://digital-ai-z.de/logo.png",
+        "image": "https://digital-ai-z.de/assets/images/logo.png",
         "telephone": "+49-173-5227934",
         "address": {
           "@type": "PostalAddress",
@@ -153,7 +153,7 @@
           aria-label="Switch to German"
           href="../"
         >
-          <img class="flag-icon" src="../de/flag-de.svg" alt="" aria-hidden="true">
+          <img class="flag-icon" src="../assets/images/flag-de.svg" alt="" aria-hidden="true">
           DE
         </a>
         <a class="nav-cta" href="#cta">
@@ -216,24 +216,65 @@
     <div class="visual-panel">
       <div class="visual-card reveal">
         <div class="visual-card-text">
-          <h2>
-            End-to-end digital transformation
+          <span class="eyebrow">Strategy · Architecture · Integration</span>
+          <h2 class="reveal">
+            Digital transformation with clear structure and measurable value
           </h2>
-          <p>
-            We don't see digitalisation as a project, but as a competitive advantage. From initial strategic advisory to stable production operations, we support you with technical excellence and business foresight.
+          <p class="visual-lead reveal">
+            We support companies from strategic assessment to sustainable execution — with a focus on sensible solutions, clean architecture and long-term decisions.
           </p>
-          <ul class="card-pills">
-            <li>Strategic IT and digitalization consulting</li>
-            <li>Selection and implementation of suitable standard solutions</li>
-            <li>Software and integration architecture</li>
-            <li>Custom development where standard solutions are not enough</li>
-            <li>AI adoption with a business focus</li>
-            <li>Management of external implementation partners</li>
-            <li>Legacy Modernisation</li>
-          </ul>
-          <p class="card-note">
-            Tailored solutions that grow alongside your business.
-          </p>
+
+          <div class="visual-groups">
+            <!-- Group 1 -->
+            <div class="visual-group-card reveal">
+              <h3>Strategy & Governance</h3>
+              <p class="group-desc">For clear decisions, suitable solutions and controlled delivery.</p>
+              
+              <div class="group-items">
+                <div class="group-item">
+                  <span class="item-title">Strategic IT and digital consulting</span>
+                  <span class="item-detail">Target state, roadmap, make-or-buy</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Selection and introduction of suitable standard solutions</span>
+                  <span class="item-detail">The right systems instead of unnecessary custom builds</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">AI adoption with a clear business focus</span>
+                  <span class="item-detail">Real use cases instead of buzzwords</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Steering and quality assurance of external implementation partners</span>
+                  <span class="item-detail">Quality, transparency and reliable outcomes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Group 2 -->
+            <div class="visual-group-card reveal" style="transition-delay: 0.1s">
+              <h3>Architecture & Delivery</h3>
+              <p class="group-desc">For stable system landscapes, integration and targeted customization.</p>
+              
+              <div class="group-items">
+                <div class="group-item">
+                  <span class="item-title">Architecture for software and system integration</span>
+                  <span class="item-detail">Scalable, clean system landscapes</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Targeted custom development</span>
+                  <span class="item-detail">Only where standard solutions are not enough</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Cloud and on-premise architecture</span>
+                  <span class="item-detail">The right infrastructure strategy instead of one-size-fits-all</span>
+                </div>
+                <div class="group-item">
+                  <span class="item-title">Modernization of existing systems (legacy)</span>
+                  <span class="item-detail">Evolve existing systems instead of replacing everything blindly</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -248,21 +289,20 @@
       <h2 class="section-title reveal">
         Built for the<br>way you work.
       </h2>
-
       <div class="services-grid">
         <div class="service-card blue reveal">
           <div class="service-icon blue">🧭</div>
           <h3>IT Consulting</h3>
           <p>
-            We assess your current landscape, identify bottlenecks, and define a clear technology roadmap aligned with your business goals. No vendor lock-in, no fluff — just clarity.
+            Many digital initiatives fail not in execution, but due to wrong decisions early on. We help you identify the right, sustainable approach — instead of defaulting to standard software or costly custom builds. With a clear focus on feasibility, cost-effectiveness and long-term value.
           </p>
         </div>
 
         <div class="service-card purple reveal" style="transition-delay:0.08s">
           <div class="service-icon purple">⚙️</div>
-          <h3>Software Development</h3>
+          <h3>Software &amp; Solutions</h3>
           <p>
-            Custom applications built to your specifications — scalable, maintainable, and delivered on time. We write software that your team can own and evolve independently.
+            Where standard solutions fall short, we develop targeted custom applications. In many cases, pragmatic compromises lead to faster results — in others, tailored solutions create real competitive advantage. We help you find the right balance.
           </p>
         </div>
 
@@ -270,15 +310,15 @@
           <div class="service-icon green">🤖</div>
           <h3>AI Integration</h3>
           <p>
-            Put machine learning and large language models to work in your existing workflows. We handle everything from model selection to production deployment and monitoring.
+            We identify meaningful use cases for AI and integrate them into your existing workflows. The focus is on real business impact, not experimental or isolated solutions.
           </p>
         </div>
 
         <div class="service-card orange reveal" style="transition-delay:0.24s">
           <div class="service-icon orange">🔗</div>
-          <h3>Enterprise Integration</h3>
+          <h3>System Integration</h3>
           <p>
-            Connect your ERP, CRM, and third-party systems into a unified, reliable data flow. We offer tailored solutions for every company size — from a first system integration to complex middleware architecture.
+            We connect your existing systems into a coherent architecture. This enables consistent processes, reliable data flows and a solid foundation for automation and scalability.
           </p>
         </div>
       </div>
@@ -289,45 +329,47 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section id="ai-feature">
       <p class="section-eyebrow reveal">
-        Our approach
+        Our Approach
       </p>
+
       <h2 class="intro-headline reveal">
-        Strategic thinking.<br>Tactical execution.
+        Think strategically.<br>Execute pragmatically.
       </h2>
+
       <p class="intro-body reveal">
-        We operate at the intersection of business strategy and technical delivery — ensuring that every solution we build creates measurable value from day one.
+        We operate at the intersection of business strategy and technical execution — with a strong focus on making the right decisions before building anything. The result: solutions that not only work, but deliver measurable value from day one.
       </p>
 
       <div class="feature-grid">
         <div class="feature-item reveal">
           <span class="fi-number">01</span>
-          <h3>Business-first</h3>
+          <h3>Business First</h3>
           <p>
-            Every technical decision is traced back to a business outcome. We speak the language of your stakeholders and translate strategy into working software.
+            Technology is not the goal. Every decision must serve a clear business outcome. We think in results, not in tools or trends.
           </p>
         </div>
 
         <div class="feature-item reveal" style="transition-delay:0.1s">
           <span class="fi-number">02</span>
-          <h3>Lean &amp; precise</h3>
+          <h3>Pragmatic Solutions</h3>
           <p>
-            We move fast without creating debt. Scope is tightly defined, quality gates are clear, and deliverables are production-ready — not prototypes.
+            Not every challenge requires a perfect solution. Well-chosen compromises often lead to faster and more efficient outcomes. Where it matters, we go deeper — always with a clear purpose.
           </p>
         </div>
 
         <div class="feature-item reveal" style="transition-delay:0.2s">
           <span class="fi-number">03</span>
-          <h3>Knowledge transfer</h3>
+          <h3>Sound Decisions</h3>
           <p>
-            We don't create dependency. Alongside every engagement we document, train, and hand off — so your team is more capable after we leave than before.
+            The biggest costs often come from wrong decisions early on. We avoid premature commitments to tools or technologies and choose what truly holds up in the long term.
           </p>
         </div>
 
         <div class="feature-item reveal" style="transition-delay:0.3s">
           <span class="fi-number">04</span>
-          <h3>Long-term partnership</h3>
+          <h3>Independence &amp; Sustainability</h3>
           <p>
-            Relationships matter more than transactions. Many clients come back because they know we'll still be here — accountable, reachable, and invested in their success.
+            We don’t create dependencies. Through clear architecture, documentation and knowledge transfer, we ensure your team remains capable and in control long after our work is done.
           </p>
         </div>
       </div>
@@ -405,15 +447,43 @@
     <!-- CTA                                                             -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section id="cta">
-      <h2 class="reveal">
-        Ready to build something that lasts?
-      </h2>
-      <p class="reveal">
-        Tell us about your project. No commitment, no sales pitch — just a real conversation about what's possible.
-      </p>
-      <a class="btn-primary reveal" href="mailto:hello@digital-ai-z.de">
-        Start a conversation
-      </a>
+      <div class="cta-overlay"></div>
+
+      <div class="cta-content">
+        <h2 class="reveal">
+          Let's talk about your project
+        </h2>
+
+        <p class="reveal">
+          Non-binding, pragmatic, and to the point. We discuss your current situation, 
+          possible options, and the most sensible next step.
+        </p>
+
+        <div class="cta-actions reveal">
+          <a class="btn-primary" href="mailto:hello@digital-ai-z.de?subject=Project Inquiry">
+            Send an E-Mail
+          </a>
+        </div>
+
+        <div class="cta-contact-links reveal">
+          <a href="tel:+491234567890" class="contact-btn">
+            <img src="../assets/images/icon-phone.svg" alt="" class="contact-icon" aria-hidden="true">
+            +49 123 4567890
+          </a>
+          <a href="mailto:hello@digital-ai-z.de" class="contact-btn">
+            <img src="../assets/images/icon-mail.svg" alt="" class="contact-icon" aria-hidden="true">
+            hello@digital-ai-z.de
+          </a>
+          <a href="https://www.linkedin.com/company/digital-ai-z/" target="_blank" rel="noopener" class="contact-btn">
+            <img src="../assets/images/icon-linkedin.svg" alt="" class="contact-icon" aria-hidden="true">
+            LinkedIn
+          </a>
+        </div>
+
+        <p class="cta-note reveal">
+          Typically, you will receive a response within 24 hours.
+        </p>
+      </div>
     </section>
   </main>
 
@@ -487,6 +557,9 @@
         </div>
       </div>
 
+      <!-- Calendly widget -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async defer></script>
       <script src="../main.js" defer></script>
       <script src="../modal.js" defer></script>
     </body>
