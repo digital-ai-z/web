@@ -8,7 +8,9 @@ const closeModal = document.getElementById('close-modal');
 if (modal && modalContent && closeModal) {
   const loadContent = async (type) => {
     const lang = document.documentElement.lang || 'de';
-    const filePath = `${lang}/${type}.html`;
+    const isRoot = !window.location.pathname.includes('/en/');
+    const prefix = isRoot ? '' : '../';
+    const filePath = `${prefix}${lang}/${type}.html`;
     
     try {
       const response = await fetch(filePath);
