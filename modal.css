@@ -6,11 +6,15 @@
   font-size: 16px;
   line-height: 1.7;
   color: #1a1a1a;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .modal:not(#modal-body-content) {
   background: white;
   padding: 3rem 1rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 #modal-body-content.modal {
@@ -38,6 +42,8 @@
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #111;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .modal h2,
@@ -54,6 +60,8 @@
   border-top: 1px solid #ebebeb !important;
   display: block !important;
   padding-top: 1.5rem !important;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .modal h2:first-of-type,

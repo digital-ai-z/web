@@ -36,6 +36,10 @@ if (modal && modalContent && closeModal) {
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     
+    // Reset scroll position when opening new content
+    const scrollArea = document.getElementById('modal-scroll-area');
+    if (scrollArea) scrollArea.scrollTop = 0;
+    
     const currentLang = document.documentElement.lang || 'de';
     if (modalContent.dataset.lang !== currentLang || modalContent.dataset.type !== type) {
        await loadContent(type);
