@@ -25,14 +25,11 @@ revealOnScroll();
 
 // Calendly Integration
 window.addEventListener('load', function() {
-  if (window.Calendly) {
-    const isEn = window.location.pathname.includes('/en/');
-    Calendly.initBadgeWidget({
-      url: 'https://calendly.com/digitalaiz-rauls',
-      text: isEn ? 'Schedule a call' : 'Termin vereinbaren',
-      color: '#2dd4bf',
-      textColor: '#080808',
-      branding: false
+  const calendlyBtn = document.getElementById('cta-calendly-btn');
+  if (calendlyBtn && window.Calendly) {
+    calendlyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      Calendly.showPopupWidget('https://calendly.com/digitalaiz-rauls');
     });
   }
 });
