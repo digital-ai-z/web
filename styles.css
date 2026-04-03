@@ -97,7 +97,10 @@ nav.scrolled {
 
 .nav-cta {
   font-size: 13px;
-  padding: 7px 18px;
+  padding: 7px 0;
+  width: 150px;
+  display: inline-block;
+  text-align: center;
   border-radius: 980px;
   background: #3f49b1;
   color: #fff;
