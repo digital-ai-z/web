@@ -17,6 +17,7 @@
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
+  
 </head>
 <body>
 
@@ -38,8 +39,7 @@
         <button
           class="lang-toggle"
           id="lang-toggle"
-          aria-label="Switch language"
-          aria-pressed="false"
+          aria-label="Switch to English"
           type="button"
         >EN</button>
         <a class="nav-cta" href="#cta">
@@ -54,8 +54,8 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section id="hero">
       <p class="hero-label">
-        <span class="de">IT-Beratung · Softwareentwicklung · KI-Integration</span>
-        <span class="en">IT Consulting · Software Development · AI Integration</span>
+        <span class="de">IT-Beratung ·<span style="white-space: nowrap"> Softwareentwicklung</span> ·<span style="white-space: nowrap"> KI-Integration</span></span>
+        <span class="en">IT Consulting ·<span style="white-space: nowrap"> Software Development</span> ·<span style="white-space: nowrap"> AI Integration</span></span>
       </p>
 
       <h1 class="hero-title">
@@ -111,42 +111,28 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <div class="visual-panel">
       <div class="visual-card reveal">
-        <div class="ai-canvas">
-          <div class="node" style="width:10px;height:10px;top:18%;left:20%"></div>
-          <div class="node" style="width:14px;height:14px;top:62%;left:12%"></div>
-          <div class="node purple" style="width:12px;height:12px;top:28%;left:48%"></div>
-          <div class="node purple" style="width:18px;height:18px;top:70%;left:55%"></div>
-          <div class="node" style="width:10px;height:10px;top:40%;left:78%"></div>
-          <div class="node pink" style="width:14px;height:14px;top:80%;left:82%"></div>
-          <div class="node" style="width: 8px;height: 8px;top:10%;left:70%"></div>
-          <div class="node purple" style="width:10px;height:10px;top:55%;left:35%"></div>
-          <div class="connector" style="top:18.5%;left:20.5%;width:220px;transform:rotate(12deg)"></div>
-          <div class="connector" style="top:28.5%;left:48.5%;width:180px;transform:rotate(-8deg)"></div>
-          <div class="connector" style="top:41%;left:35%;width:260px;transform:rotate(5deg)"></div>
-          <div class="connector" style="top:63%;left:12.5%;width:300px;transform:rotate(-14deg)"></div>
-          <div class="connector" style="top:71%;left:55.5%;width:200px;transform:rotate(6deg)"></div>
-          <div class="connector" style="top:10.5%;left:70%;width:150px;transform:rotate(30deg)"></div>
-        </div>
         <div class="visual-card-text">
           <h2>
             <span class="de">Ganzheitliche digitale Transformation</span>
             <span class="en">End-to-end digital transformation</span>
           </h2>
           <p>
-            <span class="de">Von der Strategie bis zur Inbetriebnahme — wir begleiten Sie auf dem gesamten Weg als verlässlicher Partner.</span>
-            <span class="en">From strategy to deployment, we cover the full journey — so you have one trusted partner at every stage.</span>
+            <span class="de">Wir verstehen Digitalisierung nicht als Projekt, sondern als Wettbewerbsvorteil. Von der ersten strategischen Beratung bis zum stabilen Produktivbetrieb begleiten wir Sie mit technischer Exzellenz und unternehmerischem Weitblick.</span>
+            <span class="en">We don't see digitalisation as a project, but as a competitive advantage. From initial strategic advisory to stable production operations, we support you with technical excellence and business foresight.</span>
           </p>
           <ul class="card-pills">
-            <li><span class="de">Konzeptionierung</span><span class="en">Conceptualisation</span></li>
-            <li><span class="de">Bewertung &amp; Empfehlung</span><span class="en">Assessment &amp; Advisory</span></li>
+            <li><span class="de">Strategie &amp; Roadmap</span><span class="en">Strategy &amp; Roadmap</span></li>
+            <li><span class="de">Architektur-Design</span><span class="en">Architecture Design</span></li>
+            <li><span class="de">Individualsoftware</span><span class="en">Custom Software</span></li>
             <li><span class="de">Integration von Standardsoftware</span><span class="en">Standard Software Integration</span></li>
-            <li><span class="de">Entwicklung &amp; Umsetzung</span><span class="en">Development &amp; Implementation</span></li>
-            <li><span class="de">KI-Integration &amp; Automatisierung</span><span class="en">AI Integration &amp; Automation</span></li>
+            <li><span class="de">Cloud Lösungen</span><span class="en">Cloud Solutions</span></li>
+            <li><span class="de">KI &amp; Automatisierung</span><span class="en">AI &amp; Automation</span></li>
             <li><span class="de">Prozess- &amp; Workflow-Optimierung</span><span class="en">Process &amp; Workflow Optimisation</span></li>
+            <li><span class="de">Legacy Modernisierung</span><span class="en">Legacy Modernisation</span></li>
           </ul>
           <p class="card-note">
-            <span class="de">Einzeln oder gebündelt — ganz wie Sie es brauchen.</span>
-            <span class="en">Individual services or as a complete package — whatever fits your needs.</span>
+            <span class="de">Maßgeschneiderte Lösungen, die mit Ihrem Unternehmen wachsen.</span>
+            <span class="en">Tailored solutions that grow alongside your business.</span>
           </p>
         </div>
       </div>
@@ -271,7 +257,7 @@
         </h2>
         <p>
           <span class="de">Ob Neuprodukt oder Modernisierung eines Legacy-Systems — wir bringen Sie verlässlich ans Ziel.</span>
-          <span class="en">Whether you're launching a new product or modernising a legacy system, we take you there — reliably.</span>
+          <span class="en">Whether you're launching a new product or modernizing a legacy system, we take you there — reliably.</span>
         </p>
       </div>
     </div>
@@ -371,7 +357,7 @@
 
         <div class="footer-cols">
           <div class="footer-col">
-            <h4><span class="de">Leistungen</span><span class="en">Services</span></h4>
+            <h3><span class="de">Leistungen</span><span class="en">Services</span></h3>
             <ul>
               <li><a href="#services"><span class="de">IT-Beratung</span><span class="en">IT Consulting</span></a></li>
               <li><a href="#services"><span class="de">Softwareentwicklung</span><span class="en">Software Development</span></a></li>
@@ -381,7 +367,7 @@
           </div>
 
           <div class="footer-col">
-            <h4><span class="de">Unternehmen</span><span class="en">Company</span></h4>
+            <h3><span class="de">Unternehmen</span><span class="en">Company</span></h3>
             <ul>
               <li><a href="#intro"><span class="de">Über uns</span><span class="en">About</span></a></li>
               <li><a href="#process"><span class="de">Unser Prozess</span><span class="en">Our Process</span></a></li>
@@ -390,7 +376,7 @@
           </div>
 
           <div class="footer-col">
-            <h4><span class="de">Kontakt</span><span class="en">Contact</span></h4>
+            <h3><span class="de">Kontakt</span><span class="en">Contact</span></h3>
             <ul>
               <li><a href="mailto:hello@digital-ai-z.de">hello@digital-ai-z.de</a></li>
               <li><address>Deggendorf, Deutschland</address></li>

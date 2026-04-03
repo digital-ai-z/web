@@ -20,4 +20,5 @@ btn.addEventListener('click', () => {
   html.classList.toggle('lang-en',  toEN);
   html.lang  = toEN ? 'en' : 'de';
   btn.textContent = toEN ? 'DE' : 'EN';
+  btn.setAttribute('aria-label', toEN ? 'Auf Deutsch wechseln' : 'Switch to English');
 });
