@@ -1,24 +1,43 @@
-// 1. Nav background on scroll
+// Navigation scroll effect
 const nav = document.getElementById('main-nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 32);
-}, { passive: true });
+if (nav) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+}
 
-// 2. Scroll-reveal
-const observer = new IntersectionObserver(
-  entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
-  { threshold: 0.12 }
-);
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+// Scroll-reveal animations
+const reveals = document.querySelectorAll('.reveal');
+const revealOnScroll = () => {
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.9) {
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
 
-// 3. Language toggle
-const html = document.documentElement;
-const btn  = document.getElementById('lang-toggle');
-btn.addEventListener('click', () => {
-  const toEN = html.classList.contains('lang-de');
-  html.classList.toggle('lang-de', !toEN);
-  html.classList.toggle('lang-en',  toEN);
-  html.lang  = toEN ? 'en' : 'de';
-  btn.textContent = toEN ? 'DE' : 'EN';
-  btn.setAttribute('aria-label', toEN ? 'Auf Deutsch wechseln' : 'Switch to English');
-});
+// Language switching logic
+const langToggle = document.getElementById('lang-toggle');
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    const isDe = document.documentElement.classList.contains('lang-de');
+    if (isDe) {
+      document.documentElement.classList.remove('lang-de');
+      document.documentElement.classList.add('lang-en');
+      document.documentElement.lang = 'en';
+      langToggle.textContent = 'DE';
+    } else {
+      document.documentElement.classList.remove('lang-en');
+      document.documentElement.classList.add('lang-de');
+      document.documentElement.lang = 'de';
+      langToggle.textContent = 'EN';
+    }
+  });
+}

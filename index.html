@@ -388,13 +388,26 @@
       <div class="footer-bottom">
         <p>© 2026 Digital AI-Z GbR. <span class="de">Alle Rechte vorbehalten.</span><span class="en">All rights reserved.</span></p>
         <div class="footer-links">
-          <a href="/impressum">Impressum</a>
-          <a href="/datenschutz">Datenschutz</a>
+          <a href="#" id="impressum-link"><span class="de">Impressum</span><span class="en">Legal Notice</span></a>
+          <a href="/datenschutz"><span class="de">Datenschutz</span><span class="en">Privacy Policy</span></a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- Modals                                                          -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div id="impressum-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal-content">
+      <button class="close-btn" id="close-modal" aria-label="Close">&times;</button>
+      <div id="modal-body-content">
+        <!-- dynamic content -->
+      </div>
+    </div>
+  </div>
+
   <script src="main.js" defer></script>
+  <script src="modal.js" defer></script>
 </body>
 </html>
