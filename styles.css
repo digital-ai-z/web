@@ -744,7 +744,7 @@ footer {
 }
 
 .modal-content {
-  background: var(--bg-light);
+  background: white;
   color: var(--text-dark);
   width: 100%;
   max-width: 800px;
