@@ -11,7 +11,7 @@ if (nav) {
 }
 
 // Scroll-reveal animations
-const reveals = document.querySelectorAll('.reveal');
+const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 const revealOnScroll = () => {
   reveals.forEach(el => {
     const rect = el.getBoundingClientRect();
