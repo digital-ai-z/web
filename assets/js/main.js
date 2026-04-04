@@ -10,6 +10,40 @@ if (nav) {
   });
 }
 
+// Mobile hamburger menu
+const hamburger = document.getElementById('nav-hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (hamburger && mobileMenu) {
+  const openMenu = () => {
+    hamburger.classList.add('open');
+    mobileMenu.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeMenu = () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
+  });
+}
+
 // Scroll-reveal animations
 const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 const revealOnScroll = () => {
@@ -23,13 +57,3 @@ const revealOnScroll = () => {
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
-// Calendly Integration
-window.addEventListener('load', function() {
-  const calendlyBtn = document.getElementById('cta-calendly-btn');
-  if (calendlyBtn && window.Calendly) {
-    calendlyBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      Calendly.showPopupWidget('https://calendly.com/digitalaiz-rauls');
-    });
-  }
-});

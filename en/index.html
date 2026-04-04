@@ -171,7 +171,29 @@
                 Get in touch
             </a>
         </div>
+
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#ai-feature">Approach</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#cta">Contact</a></li>
+        </ul>
+        <div class="mobile-nav-bottom">
+            <a class="mobile-lang" href="../">
+                <span class="mobile-lang-prefix">Switch language to</span>
+                <img class="flag-icon" src="../assets/images/flag-de.svg" alt="" aria-hidden="true">
+                Deutsch
+            </a>
+        </div>
+    </div>
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <!-- Hero                                                            -->
@@ -320,41 +342,56 @@
         <h2 class="section-title reveal">
             Built for the<br>way you work.
         </h2>
+
+        <div class="services-intro reveal">
+            <p>Digital AI-Z was founded to bridge the gap between cutting-edge technology and real business processes.
+            We combine strategic consulting with hands-on implementation — from AI models to enterprise systems —
+            so your organisation can evolve with confidence.</p>
+            <span class="services-experience">15+ years of experience · Multiple industries &amp; company sizes</span>
+        </div>
+
         <div class="services-grid">
             <div class="service-card blue reveal">
                 <div class="service-icon blue">🧭</div>
                 <h3>IT Consulting</h3>
                 <p>
-                    Good digitalisation starts with the right decisions. We help you find the right, sustainable
-                    approach — with a clear eye on feasibility, cost-effectiveness and long-term value.
+                    We assess your current landscape, define a clear IT roadmap and guide make-or-buy decisions.
+                    Concrete and without detours.
                 </p>
             </div>
 
-            <div class="service-card purple reveal" style="transition-delay:0.08s">
+            <div class="service-card purple reveal" style="transition-delay:0.06s">
                 <div class="service-icon purple">⚙️</div>
                 <h3>Software &amp; Solutions</h3>
                 <p>
-                    Where standard solutions fall short, we develop targeted custom applications. In many cases,
-                    pragmatic compromises lead to faster results — in others, tailored solutions create real competitive
-                    advantage. We help you find the right balance.
+                    Custom applications where standard software falls short. Pragmatically built,
+                    maintainable long-term.
                 </p>
             </div>
 
-            <div class="service-card green reveal" style="transition-delay:0.16s">
+            <div class="service-card green reveal" style="transition-delay:0.12s">
                 <div class="service-icon green">🤖</div>
                 <h3>AI Integration</h3>
                 <p>
-                    We identify meaningful use cases for AI and integrate them into your existing workflows. We deliver
-                    measurable business impact through practical, production-ready solutions.
+                    Concrete AI use cases, integrated directly into your workflows. Measurably effective
+                    from day one.
                 </p>
             </div>
 
-            <div class="service-card orange reveal" style="transition-delay:0.24s">
+            <div class="service-card orange reveal" style="transition-delay:0.18s">
                 <div class="service-icon orange">🔗</div>
                 <h3>System Integration</h3>
                 <p>
-                    We connect your existing systems into a coherent architecture. This enables consistent processes,
-                    reliable data flows and a solid foundation for automation and scalability.
+                    Your systems talk to each other — reliably, automated and at scale.
+                </p>
+            </div>
+
+            <div class="service-card teal reveal" style="transition-delay:0.24s">
+                <div class="service-icon teal">📊</div>
+                <h3>Data &amp; Automation</h3>
+                <p>
+                    We structure your data foundation and automate recurring processes.
+                    Less manual work, more transparency.
                 </p>
             </div>
         </div>
@@ -505,12 +542,6 @@
                 possible options, and the most sensible next step.
             </p>
 
-            <div class="cta-actions reveal">
-                <button id="cta-calendly-btn" class="btn-primary">
-                    Schedule a call
-                </button>
-            </div>
-
             <div class="cta-contact-links reveal">
                 <a href="tel:+491234567890" class="contact-btn">
                     <img src="../assets/images/icon-phone.svg" alt="" class="contact-icon" aria-hidden="true">
@@ -543,8 +574,7 @@
             <div class="footer-brand">
                 <div class="logo">Digital <span>AI</span>-Z</div>
                 <p>
-                    IT consulting, software development, and AI integration — for businesses of all sizes that want to
-                    move faster.
+                    IT consulting, software development, and AI integration
                 </p>
             </div>
 
@@ -606,11 +636,8 @@
     </div>
 </div>
 
-<!-- Calendly widget -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async defer></script>
 <script src="../assets/js/main.js" defer></script>
 <script src="../assets/js/modal.js" defer></script>
 </body>
 </html>
-  
+                                                                                 

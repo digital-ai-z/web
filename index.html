@@ -171,7 +171,29 @@
                 Kontakt aufnehmen
             </a>
         </div>
+
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-links">
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#ai-feature">Ansatz</a></li>
+            <li><a href="#process">Prozess</a></li>
+            <li><a href="#cta">Kontakt</a></li>
+        </ul>
+        <div class="mobile-nav-bottom">
+            <a class="mobile-lang" href="en/">
+                <span class="mobile-lang-prefix">Sprache wechseln zu</span>
+                <img class="flag-icon" src="assets/images/flag-en.svg" alt="" aria-hidden="true">
+                English
+            </a>
+        </div>
+    </div>
 
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <!-- Hero                                                            -->
@@ -323,42 +345,56 @@
         <h2 class="section-title reveal">
             Gebaut für die Art,<br>wie Sie arbeiten.
         </h2>
+
+        <div class="services-intro reveal">
+            <p>Digital AI-Z wurde gegründet, um die Lücke zwischen modernster Technologie und echten
+            Geschäftsprozessen zu schließen. Wir verbinden strategische Beratung mit konkreter Umsetzung —
+            von KI-Modellen bis hin zu Unternehmenssystemen — damit Ihre Organisation selbstbewusst wachsen kann.</p>
+            <span class="services-experience">Über 15 Jahre Erfahrung · Verschiedene Branchen &amp; Unternehmensgrößen</span>
+        </div>
+
         <div class="services-grid">
             <div class="service-card blue reveal">
                 <div class="service-icon blue">🧭</div>
                 <h3>IT-Beratung</h3>
                 <p>
-                    Gute Digitalisierung beginnt mit den richtigen Entscheidungen. Wir helfen Ihnen, die passende und
-                    nachhaltige Lösung zu finden — mit klarem Blick für Wirtschaftlichkeit, Umsetzbarkeit und
-                    langfristigen Nutzen.
+                    Wir analysieren Ihren Status quo, entwickeln eine klare IT-Roadmap und begleiten
+                    Make-or-Buy-Entscheidungen. Konkret und ohne Umwege.
                 </p>
             </div>
 
-            <div class="service-card purple reveal" style="transition-delay:0.08s">
+            <div class="service-card purple reveal" style="transition-delay:0.06s">
                 <div class="service-icon purple">⚙️</div>
                 <h3>Software &amp; Lösungen</h3>
                 <p>
-                    Wo Standardlösungen nicht ausreichen, entwickeln wir gezielte individuelle Anwendungen. In vielen
-                    Fällen führen pragmatische Kompromisse schneller zum Ziel — in anderen schaffen maßgeschneiderte
-                    Lösungen echte Wettbewerbsvorteile. Wir finden die richtige Balance.
+                    Individuelle Anwendungen dort, wo Standardsoftware nicht ausreicht. Pragmatisch
+                    entwickelt, langfristig wartbar.
                 </p>
             </div>
 
-            <div class="service-card green reveal" style="transition-delay:0.16s">
+            <div class="service-card green reveal" style="transition-delay:0.12s">
                 <div class="service-icon green">🤖</div>
                 <h3>KI-Integration</h3>
                 <p>
-                    Wir identifizieren sinnvolle Einsatzmöglichkeiten für KI und integrieren diese in Ihre bestehenden
-                    Abläufe. Wir schaffen messbaren Mehrwert durch praxisnahe, produktionsreife Lösungen.
+                    Konkrete KI-Anwendungsfälle, direkt in Ihre Abläufe integriert. Messbar wirksam
+                    vom ersten Tag.
                 </p>
             </div>
 
-            <div class="service-card orange reveal" style="transition-delay:0.24s">
+            <div class="service-card orange reveal" style="transition-delay:0.18s">
                 <div class="service-icon orange">🔗</div>
                 <h3>Systemintegration</h3>
                 <p>
-                    Wir verbinden Ihre bestehenden Systeme zu einer konsistenten Gesamtarchitektur. So entstehen
-                    durchgängige Prozesse, saubere Datenflüsse und die Basis für Automatisierung und Skalierung.
+                    Ihre Systeme sprechen miteinander — zuverlässig, automatisiert und skalierbar.
+                </p>
+            </div>
+
+            <div class="service-card teal reveal" style="transition-delay:0.24s">
+                <div class="service-icon teal">📊</div>
+                <h3>Daten &amp; Automatisierung</h3>
+                <p>
+                    Wir strukturieren Ihre Datenbasis und automatisieren wiederkehrende Prozesse.
+                    Weniger manuelle Arbeit, mehr Transparenz.
                 </p>
             </div>
         </div>
@@ -513,12 +549,6 @@
                 mögliche Optionen und den sinnvollsten nächsten Schritt.
             </p>
 
-            <div class="cta-actions reveal">
-                <button id="cta-calendly-btn" class="btn-primary">
-                    Termin vereinbaren
-                </button>
-            </div>
-
             <div class="cta-contact-links reveal">
                 <a href="tel:+491234567890" class="contact-btn">
                     <img src="assets/images/icon-phone.svg" alt="" class="contact-icon" aria-hidden="true">
@@ -551,8 +581,7 @@
             <div class="footer-brand">
                 <div class="logo">Digital <span>AI</span>-Z</div>
                 <p>
-                    IT-Beratung, Softwareentwicklung und KI-Integration — für kleine, mittelständische und große
-                    Unternehmen, die schneller vorankommen wollen.
+                    IT-Beratung, Softwareentwicklung und KI-Integration
                 </p>
             </div>
 
@@ -615,10 +644,8 @@
     </div>
 </div>
 
-<!-- Calendly widget -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async defer></script>
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/modal.js" defer></script>
 </body>
 </html>
+                                                                                                                               
