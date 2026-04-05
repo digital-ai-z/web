@@ -685,11 +685,11 @@ nav.scrolled {
 /* ─── CTA ───────────────────────────────────────────────────────── */
 #cta {
   background:
-    radial-gradient(circle at 14% 18%, rgba(45, 212, 191, 0.16) 0%, transparent 28%),
-    radial-gradient(circle at 84% 16%, rgba(129, 140, 248, 0.17) 0%, transparent 34%),
-    radial-gradient(circle at 72% 82%, rgba(192, 132, 252, 0.14) 0%, transparent 30%),
-    linear-gradient(135deg, #050608 0%, #090c14 42%, #070911 68%, #040506 100%);
-  padding: 140px 24px;
+    radial-gradient(circle at 18% 26%, rgba(45, 212, 191, 0.14) 0%, rgba(45, 212, 191, 0.07) 16%, transparent 42%),
+    radial-gradient(circle at 84% 18%, rgba(129, 140, 248, 0.12) 0%, rgba(129, 140, 248, 0.06) 18%, transparent 38%),
+    radial-gradient(circle at 76% 78%, rgba(192, 132, 252, 0.12) 0%, rgba(192, 132, 252, 0.05) 16%, transparent 36%),
+    linear-gradient(180deg, #04050a 0%, #070a12 34%, #090d16 62%, #04050a 100%);
+  padding: 132px 24px 116px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -702,10 +702,10 @@ nav.scrolled {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 26px 26px;
-  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.75) 0%, transparent 72%);
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.75) 0%, transparent 72%);
-  opacity: 0.22;
+  background-size: 28px 28px;
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.82) 0%, transparent 74%);
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.82) 0%, transparent 74%);
+  opacity: 0.15;
   z-index: -1;
   pointer-events: none;
 }
@@ -733,16 +733,20 @@ nav.scrolled {
   z-index: 1;
   max-width: 1120px;
   margin: 0 auto;
+  transform: translateY(-10px);
 }
 
 .cta-shell {
   max-width: 860px;
   margin: 0 auto;
-  padding: clamp(24px, 4vw, 40px) 0;
+  padding: clamp(18px, 3vw, 28px) 0 0;
 }
 
 .cta-lead {
-  margin: 0 auto 34px !important;
+  max-width: 620px !important;
+  margin: 0 auto 30px !important;
+  font-size: clamp(17px, 2vw, 20px) !important;
+  color: rgba(245,245,247,0.74) !important;
 }
 
 .cta-actions {
@@ -750,7 +754,7 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   flex-wrap: wrap;
 }
 
@@ -762,8 +766,12 @@ nav.scrolled {
 
 #cta .btn-primary {
   font-size: 17px;
-  min-width: min(100%, 320px);
-  padding: 17px 36px;
+  min-width: min(100%, 336px);
+  padding: 18px 38px;
+  box-shadow:
+    0 20px 46px rgba(63, 73, 177, 0.36),
+    0 0 0 1px rgba(255,255,255,0.07),
+    inset 0 1px 0 rgba(255,255,255,0.22);
 }
 
 #cta .btn-ghost:hover {
@@ -771,8 +779,9 @@ nav.scrolled {
 }
 
 .cta-note {
-  font-size: 13px;
-  color: rgba(245,245,247,0.68);
+  font-size: 14px;
+  color: rgba(245,245,247,0.72);
+  letter-spacing: -0.01em;
   margin-top: 0 !important;
 }
 
@@ -780,11 +789,11 @@ nav.scrolled {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  margin-top: 22px;
+  gap: 10px;
+  margin-top: 18px;
   flex-wrap: wrap;
-  color: rgba(245,245,247,0.48);
-  font-size: 14px;
+  color: rgba(245,245,247,0.36);
+  font-size: 13px;
 }
 
 @media (max-width: 768px) {
@@ -796,29 +805,33 @@ nav.scrolled {
 .cta-support-links a {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  color: rgba(245,245,247,0.72);
+  gap: 7px;
+  color: rgba(245,245,247,0.52);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 450;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .cta-support-icon {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   flex-shrink: 0;
-  opacity: 0.82;
+  opacity: 0.46;
 }
 
 .cta-support-links a:hover {
   color: var(--accent);
-  opacity: 1;
+  opacity: 0.9;
+}
+
+.cta-support-links a:hover .cta-support-icon {
+  opacity: 0.68;
 }
 
 @media (max-width: 600px) {
   #cta {
-    padding: 112px 20px;
+    padding: 110px 20px 94px;
   }
 
   #cta::before {
@@ -826,7 +839,7 @@ nav.scrolled {
   }
 
   .cta-shell {
-    padding: 18px 0 0;
+    padding: 14px 0 0;
   }
 
   .cta-actions {
