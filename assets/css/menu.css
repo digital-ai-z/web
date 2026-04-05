@@ -98,7 +98,6 @@
   transition: color 0.2s;
 }
 .mobile-nav-links li:last-child a { border-bottom: none; }
-.mobile-nav-links li a:hover { color: var(--text-light); }
 .mobile-nav-bottom {
   display: flex;
   flex-direction: column;
@@ -130,4 +129,15 @@
 @media (max-width: 768px) {
   .nav-hamburger { display: flex; }
   .mobile-menu   { display: flex; }
+
+  .mobile-nav-links li a,
+  .mobile-lang,
+  .nav-hamburger {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .mobile-nav-links li a:active,
+  .mobile-lang:active {
+    color: var(--accent);
+  }
 }
