@@ -1,3 +1,19 @@
+// Preserve anchor hash when switching language
+const langToggle = document.getElementById('lang-toggle');
+const mobileLang = document.querySelector('.mobile-lang');
+
+const applyHashToLangLinks = () => {
+  const hash = window.location.hash;
+  [langToggle, mobileLang].forEach(el => {
+    if (!el) return;
+    const base = el.getAttribute('href').split('#')[0];
+    el.setAttribute('href', hash ? base + hash : base);
+  });
+};
+
+applyHashToLangLinks();
+window.addEventListener('hashchange', applyHashToLangLinks);
+
 // Navigation scroll effect
 const nav = document.getElementById('main-nav');
 if (nav) {
