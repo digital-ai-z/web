@@ -5,6 +5,7 @@
 
   const cards = Array.from(track.querySelectorAll('.gallery-card'));
   const dots  = Array.from(document.querySelectorAll('.gallery-dot'));
+  const indexedLinks = Array.from(document.querySelectorAll('a[data-gallery-index][href="#services"]'));
   const total = cards.length;
 
   let current   = 0;
@@ -29,8 +30,21 @@
       : 'transform 0.65s cubic-bezier(0.4, 0, 0.2, 1)';
     track.style.transform = `translateX(${tx}px)`;
 
-    cards.forEach((c, i) => c.classList.toggle('active', i === current));
+    cards.forEach((c, i) => {
+      const isActive = i === current;
+      c.classList.toggle('active', isActive);
+      if (isActive) {
+        c.tabIndex = -1;
+      } else {
+        c.removeAttribute('tabindex');
+      }
+    });
     dots.forEach((d, i)  => d.classList.toggle('active', i === current));
+  }
+
+  function focusCurrentCard() {
+    const activeCard = cards[current];
+    if (activeCard) activeCard.focus({ preventScroll: true });
   }
 
   /* ── Auto-play ────────────────────────────────────────────────── */
@@ -44,6 +58,19 @@
   /* ── Dots ─────────────────────────────────────────────────────── */
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => { goTo(i, true); resetAuto(); });
+  });
+
+  indexedLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const index = Number.parseInt(link.dataset.galleryIndex || '', 10);
+      if (Number.isNaN(index)) return;
+
+      window.requestAnimationFrame(() => {
+        goTo(index, true);
+        resetAuto();
+        window.setTimeout(focusCurrentCard, 250);
+      });
+    });
   });
 
   /* ── Play / Pause button ──────────────────────────────────────── */

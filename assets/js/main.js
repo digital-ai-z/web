@@ -46,14 +46,36 @@ if (hamburger && mobileMenu) {
 
 // Scroll-reveal animations
 const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-const revealOnScroll = () => {
-  reveals.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.9) {
-      el.classList.add('visible');
-    }
-  });
-};
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
 
+const revealElement = (el) => {
+  el.classList.add('visible');
+};
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const minVisibleRatio = entry.target.classList.contains('step') ? 0.2 : 0.28;
+      if (entry.isIntersecting && entry.intersectionRatio >= minVisibleRatio) {
+        revealElement(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: [0, 0.2, 0.28, 0.4],
+    rootMargin: '0px 0px -8% 0px'
+  });
+
+  reveals.forEach(el => revealObserver.observe(el));
+} else {
+  const revealOnScroll = () => {
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.78) {
+        revealElement(el);
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll, { passive: true });
+  revealOnScroll();
+}
