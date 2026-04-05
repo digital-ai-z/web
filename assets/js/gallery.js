@@ -144,7 +144,6 @@
     resizeTimer = setTimeout(() => goTo(current, false), 80);
   });
 
-  /* ── Init ─────────────────────────────────────────────────────── */
   goTo(0, false);
   startAuto();
 })();

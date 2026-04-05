@@ -46,7 +46,6 @@
   filter: brightness(1);
 }
 
-/* text-legibility gradient — top-heavy now */
 .gallery-card::after {
   content: '';
   position: absolute;
@@ -96,7 +95,6 @@
   max-width: 460px;
 }
 
-/* ── Card background gradients (swap for real images via background-image later) ── */
 .card-bg-1 {
   background:
     radial-gradient(ellipse at 30% 70%, rgba(30,58,95,var(--overlay-opacity)) 0%, rgba(10,22,40,var(--overlay-opacity)) 55%, rgba(5,13,26,var(--overlay-opacity)) 100%),

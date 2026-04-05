@@ -14,7 +14,6 @@ const applyHashToLangLinks = () => {
 applyHashToLangLinks();
 window.addEventListener('hashchange', applyHashToLangLinks);
 
-// Navigation scroll effect
 const nav = document.getElementById('main-nav');
 if (nav) {
   window.addEventListener('scroll', () => {
@@ -26,7 +25,6 @@ if (nav) {
   });
 }
 
-// Mobile hamburger menu
 const hamburger = document.getElementById('nav-hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -54,13 +52,11 @@ if (hamburger && mobileMenu) {
     link.addEventListener('click', closeMenu);
   });
 
-  // Close on Escape key
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
   });
 }
 
-// Scroll-reveal animations
 const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 
 const revealElement = (el) => {

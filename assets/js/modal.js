@@ -1,4 +1,3 @@
-// Modal logic
 const modal = document.getElementById('impressum-modal');
 const modalContent = document.getElementById('modal-body-content');
 const openImpressum = document.getElementById('impressum-link');
