@@ -1,0 +1,135 @@
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    /* Hero — shrink text on mobile */
+    #hero {
+        padding: 20px 20px 60px;
+    }
+
+    .hero-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero-title {
+        font-size: clamp(36px, 10vw, 52px);
+    }
+
+    .hero-sub {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .hero-actions {
+        margin-top: 32px;
+        gap: 12px;
+        padding: 0 32px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .value-points {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .value-point {
+        border-right: none;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .value-point:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-cols {
+        gap: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .visual-card {
+        min-height: 480px; /* adjusted for mobile */
+    }
+
+    #cta {
+        padding: 100px 24px;
+    }
+
+    #impressum-modal {
+        padding: 0;
+    }
+
+    .modal-content {
+        border-radius: 0;
+        max-height: 100vh;
+        height: 100vh;
+    }
+
+    #modal-scroll-area {
+        padding: 60px 20px 40px;
+    }
+
+    .visual-card::before {
+        background-image: url('../images/mobile/collaboration-mobile.png');
+    }
+
+    #cta {
+        padding: 110px 20px 94px;
+    }
+
+    #cta::before {
+        content: none;
+    }
+
+    .cta-shell {
+        padding: 14px 0 0;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .cta-support-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-support-separator {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .visual-groups {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .visual-group-card {
+        padding: 32px;
+    }
+}
