@@ -39,12 +39,14 @@
   padding: 40px 32px 48px;
   overflow-y: auto;
   opacity: 0;
+  visibility: hidden;
   transform: translateY(-10px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
   pointer-events: none;
 }
 .mobile-menu.open {
   opacity: 1;
+  visibility: visible;
   transform: none;
   pointer-events: auto;
 }
