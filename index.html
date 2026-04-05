@@ -19,6 +19,7 @@
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
     <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/gallery.css"/>
     <link rel="stylesheet" href="assets/css/modal.css"/>
     <link rel="stylesheet" href="assets/css/menu.css"/>
 
@@ -340,63 +341,69 @@
     <!-- Services                                                        -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section id="services">
-        <p class="section-eyebrow purple reveal">
-            Was wir tun
-        </p>
-        <h2 class="section-title reveal">
-            Gebaut für die Art,<br>wie Sie arbeiten.
-        </h2>
+        <p class="section-eyebrow purple reveal">Was wir tun</p>
+        <h2 class="section-title reveal">Gebaut für die Art,<br>wie Sie arbeiten.</h2>
 
-        <div class="services-intro reveal">
-            <p>Digital AI-Z wurde gegründet, um die Lücke zwischen modernster Technologie und echten
-            Geschäftsprozessen zu schließen. Wir verbinden strategische Beratung mit konkreter Umsetzung —
-            von KI-Modellen bis hin zu Unternehmenssystemen — damit Ihre Organisation selbstbewusst wachsen kann.</p>
+        <div class="gallery-stage" id="gallery-stage">
+            <div class="gallery-track" id="gallery-track">
+
+                <div class="gallery-card card-bg-1 active">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">IT-Beratung</span>
+                        <h3>Klar. Strukturiert.<br>Wirtschaftlich.</h3>
+                        <p>Wir analysieren Ihren Status quo, entwickeln eine klare IT-Roadmap und begleiten Make-or-Buy-Entscheidungen. Konkret und ohne Umwege.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card card-bg-2">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">Software &amp; Lösungen</span>
+                        <h3>Pragmatisch entwickelt.<br>Langfristig wartbar.</h3>
+                        <p>Individuelle Anwendungen dort, wo Standardsoftware nicht ausreicht — maßgeschneidert, sauber gebaut und langfristig wartbar.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card card-bg-3">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">KI-Integration</span>
+                        <h3>Messbar wirksam.<br>Ab dem ersten Tag.</h3>
+                        <p>Konkrete KI-Anwendungsfälle, direkt in Ihre Abläufe integriert — messbar wirksam vom ersten Tag an.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card card-bg-4">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">Systemintegration</span>
+                        <h3>Zuverlässig.<br>Automatisiert. Skalierbar.</h3>
+                        <p>Ihre Systeme sprechen miteinander — zuverlässig, automatisiert und skalierbar. Ohne manuelle Umwege.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card card-bg-5">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">Daten &amp; Automatisierung</span>
+                        <h3>Weniger Arbeit.<br>Mehr Transparenz.</h3>
+                        <p>Wir strukturieren Ihre Datenbasis und automatisieren wiederkehrende Prozesse — für weniger manuelle Arbeit und mehr Überblick.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <div class="services-grid">
-            <div class="service-card blue reveal">
-                <div class="service-icon blue">🧭</div>
-                <h3>IT-Beratung</h3>
-                <p>
-                    Wir analysieren Ihren Status quo, entwickeln eine klare IT-Roadmap und begleiten
-                    Make-or-Buy-Entscheidungen. Konkret und ohne Umwege.
-                </p>
+        <div class="gallery-controls">
+            <div class="gallery-dots" id="gallery-dots">
+                <button class="gallery-dot active" data-index="0" aria-label="Karte 1"></button>
+                <button class="gallery-dot" data-index="1" aria-label="Karte 2"></button>
+                <button class="gallery-dot" data-index="2" aria-label="Karte 3"></button>
+                <button class="gallery-dot" data-index="3" aria-label="Karte 4"></button>
+                <button class="gallery-dot" data-index="4" aria-label="Karte 5"></button>
             </div>
-
-            <div class="service-card purple reveal" style="transition-delay:0.06s">
-                <div class="service-icon purple">⚙️</div>
-                <h3>Software &amp; Lösungen</h3>
-                <p>
-                    Individuelle Anwendungen dort, wo Standardsoftware nicht ausreicht. Pragmatisch
-                    entwickelt, langfristig wartbar.
-                </p>
-            </div>
-
-            <div class="service-card green reveal" style="transition-delay:0.12s">
-                <div class="service-icon green">🤖</div>
-                <h3>KI-Integration</h3>
-                <p>
-                    Konkrete KI-Anwendungsfälle, direkt in Ihre Abläufe integriert. Messbar wirksam
-                    vom ersten Tag.
-                </p>
-            </div>
-
-            <div class="service-card orange reveal" style="transition-delay:0.18s">
-                <div class="service-icon orange">🔗</div>
-                <h3>Systemintegration</h3>
-                <p>
-                    Ihre Systeme sprechen miteinander — zuverlässig, automatisiert und skalierbar.
-                </p>
-            </div>
-
-            <div class="service-card teal reveal" style="transition-delay:0.24s">
-                <div class="service-icon teal">📊</div>
-                <h3>Daten &amp; Automatisierung</h3>
-                <p>
-                    Wir strukturieren Ihre Datenbasis und automatisieren wiederkehrende Prozesse.
-                    Weniger manuelle Arbeit, mehr Transparenz.
-                </p>
-            </div>
+            <button class="gallery-playpause" id="gallery-playpause" aria-label="Pause">
+                <svg width="11" height="13" viewBox="0 0 11 13" fill="currentColor" aria-hidden="true">
+                    <rect x="0" y="0" width="3.5" height="13" rx="1"/>
+                    <rect x="7.5" y="0" width="3.5" height="13" rx="1"/>
+                </svg>
+            </button>
         </div>
     </section>
 
@@ -636,5 +643,6 @@
 
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/modal.js" defer></script>
+<script src="assets/js/gallery.js" defer></script>
 </body>
 </html>

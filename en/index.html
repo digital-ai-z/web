@@ -19,6 +19,7 @@
 
     <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
     <link rel="stylesheet" href="../assets/css/styles.css"/>
+    <link rel="stylesheet" href="../assets/css/gallery.css"/>
     <link rel="stylesheet" href="../assets/css/modal.css"/>
     <link rel="stylesheet" href="../assets/css/menu.css"/>
 
@@ -338,63 +339,69 @@
     <!-- Services                                                        -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <section id="services">
-        <p class="section-eyebrow purple reveal">
-            What we do
-        </p>
-        <h2 class="section-title reveal">
-            Built for the<br>way you work.
-        </h2>
+        <p class="section-eyebrow purple reveal">What we do</p>
+        <h2 class="section-title reveal">Built for the<br>way you work.</h2>
 
-        <div class="services-intro reveal">
-            <p>Digital AI-Z was founded to bridge the gap between cutting-edge technology and real business processes.
-            We combine strategic consulting with hands-on implementation — from AI models to enterprise systems —
-            so your organisation can evolve with confidence.</p>
+        <div class="gallery-stage" id="gallery-stage">
+            <div class="gallery-track" id="gallery-track">
+
+                <div class="gallery-card card-bg-1 active">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">IT Consulting</span>
+                        <h3>Clear. Structured.<br>Economically sound.</h3>
+                        <p>We assess your current landscape, define a clear IT roadmap and guide make-or-buy decisions. Concrete and without detours.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card card-bg-2">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">Software &amp; Solutions</span>
+                        <h3>Pragmatically built.<br>Maintainable long-term.</h3>
+                        <p>Custom applications where standard software falls short — tailor-made, cleanly built and maintainable for the long run.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card card-bg-3">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">AI Integration</span>
+                        <h3>Measurably effective.<br>From day one.</h3>
+                        <p>Concrete AI use cases, integrated directly into your workflows — measurably effective from the very first day.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card card-bg-4">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">System Integration</span>
+                        <h3>Reliable.<br>Automated. Scalable.</h3>
+                        <p>Your systems talk to each other — reliably, automated and at scale. Without manual workarounds.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card card-bg-5">
+                    <div class="gallery-card-content">
+                        <span class="gallery-label">Data &amp; Automation</span>
+                        <h3>Less manual work.<br>More transparency.</h3>
+                        <p>We structure your data foundation and automate recurring processes — for less manual effort and a clearer view of your business.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <div class="services-grid">
-            <div class="service-card blue reveal">
-                <div class="service-icon blue">🧭</div>
-                <h3>IT Consulting</h3>
-                <p>
-                    We assess your current landscape, define a clear IT roadmap and guide make-or-buy decisions.
-                    Concrete and without detours.
-                </p>
+        <div class="gallery-controls">
+            <div class="gallery-dots" id="gallery-dots">
+                <button class="gallery-dot active" data-index="0" aria-label="Card 1"></button>
+                <button class="gallery-dot" data-index="1" aria-label="Card 2"></button>
+                <button class="gallery-dot" data-index="2" aria-label="Card 3"></button>
+                <button class="gallery-dot" data-index="3" aria-label="Card 4"></button>
+                <button class="gallery-dot" data-index="4" aria-label="Card 5"></button>
             </div>
-
-            <div class="service-card purple reveal" style="transition-delay:0.06s">
-                <div class="service-icon purple">⚙️</div>
-                <h3>Software &amp; Solutions</h3>
-                <p>
-                    Custom applications where standard software falls short. Pragmatically built,
-                    maintainable long-term.
-                </p>
-            </div>
-
-            <div class="service-card green reveal" style="transition-delay:0.12s">
-                <div class="service-icon green">🤖</div>
-                <h3>AI Integration</h3>
-                <p>
-                    Concrete AI use cases, integrated directly into your workflows. Measurably effective
-                    from day one.
-                </p>
-            </div>
-
-            <div class="service-card orange reveal" style="transition-delay:0.18s">
-                <div class="service-icon orange">🔗</div>
-                <h3>System Integration</h3>
-                <p>
-                    Your systems talk to each other — reliably, automated and at scale.
-                </p>
-            </div>
-
-            <div class="service-card teal reveal" style="transition-delay:0.24s">
-                <div class="service-icon teal">📊</div>
-                <h3>Data &amp; Automation</h3>
-                <p>
-                    We structure your data foundation and automate recurring processes.
-                    Less manual work, more transparency.
-                </p>
-            </div>
+            <button class="gallery-playpause" id="gallery-playpause" aria-label="Pause">
+                <svg width="11" height="13" viewBox="0 0 11 13" fill="currentColor" aria-hidden="true">
+                    <rect x="0" y="0" width="3.5" height="13" rx="1"/>
+                    <rect x="7.5" y="0" width="3.5" height="13" rx="1"/>
+                </svg>
+            </button>
         </div>
     </section>
 
@@ -639,5 +646,6 @@
 
 <script src="../assets/js/main.js" defer></script>
 <script src="../assets/js/modal.js" defer></script>
+<script src="../assets/js/gallery.js" defer></script>
 </body>
 </html>
