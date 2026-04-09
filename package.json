@@ -1,0 +1,13 @@
+{
+  "name": "digital-ai-z-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "node scripts/build-css.mjs",
+    "watch:css": "chokidar \"assets/css/*.css\" -i \"assets/css/site.min.css\" -c \"npm run build:css\""
+  },
+  "devDependencies": {
+    "chokidar-cli": "3.0.0",
+    "lightningcss": "1.30.1"
+  }
+}

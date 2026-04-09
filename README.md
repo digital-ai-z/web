@@ -50,6 +50,8 @@ Total footprint: **~80 KB uncompressed** (all assets and legal pages included).
 │   └── datenschutz.html
 ├── assets/
 │   ├── css/
+│   │   ├── site.css         # CSS entry file with imports
+│   │   ├── site.min.css     # Bundled and minified stylesheet
 │   │   ├── styles.css       # Core styles and layout
 │   │   ├── gallery.css      # Scrolling card gallery
 │   │   ├── modal.css        # Legal modal overlay
@@ -62,6 +64,10 @@ Total footprint: **~80 KB uncompressed** (all assets and legal pages included).
 │   └── images/
 │       ├── *.png / *.svg    # Shared images, icons, and flags
 │       └── mobile/          # Optimised mobile variants of gallery images
+├── scripts/
+│   └── build-css.mjs        # Bundles and minifies CSS with Lightning CSS
+├── package.json             # CSS build dependency and scripts
+├── package-lock.json        # Locked dependency versions
 ├── favicon.svg
 ├── robots.txt               # Crawler instructions
 └── sitemap.xml              # SEO indexing map
@@ -147,6 +153,19 @@ npx serve .
 python3 -m http.server
 ```
 
+To regenerate the bundled and minified stylesheet:
+
+```bash
+npm install
+npm run build:css
+```
+
+To rebuild automatically while editing CSS:
+
+```bash
+npm run watch:css
+```
+
 ---
 
 ## ☁️ Deployment
@@ -169,6 +188,8 @@ It uploads only the relevant static site files:
 - `assets/`
 - `de/`
 - `en/`
+
+Before upload, the workflow installs dependencies and rebuilds `assets/css/site.min.css`.
 
 Configure these GitHub repository secrets before enabling the workflow:
 
