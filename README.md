@@ -157,6 +157,30 @@ The site is a collection of static files — it deploys to any static host as-is
 - **Netlify / Vercel** — connect repo, no build command needed, publish directory: `.`
 - **Any web server** — upload all files to the document root
 
+### GitHub Actions to SFTP
+
+This repository also includes an SFTP deployment workflow at `.github/workflows/deploy-sftp.yml`.
+It uploads only the relevant static site files:
+
+- `index.html`
+- `favicon.svg`
+- `robots.txt`
+- `sitemap.xml`
+- `assets/`
+- `de/`
+- `en/`
+
+Configure these GitHub repository secrets before enabling the workflow:
+
+- `SFTP_HOST` — hostname of the SFTP server
+- `SFTP_PORT` — optional, defaults to `22`
+- `SFTP_USERNAME` — SSH/SFTP username
+- `SFTP_PRIVATE_KEY` — private key used for authentication
+- `SFTP_REMOTE_PATH` — destination directory on the server
+- `SFTP_KNOWN_HOSTS` — optional recommended `known_hosts` entry for strict host verification
+
+The workflow runs on pushes to `main` when static site files change, and it can also be started manually from the Actions tab.
+
 ---
 
 ## 📜 Legal

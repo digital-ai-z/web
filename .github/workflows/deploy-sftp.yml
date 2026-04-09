@@ -1,0 +1,105 @@
+name: Deploy static site to SFTP
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "index.html"
+      - "favicon.svg"
+      - "robots.txt"
+      - "sitemap.xml"
+      - "assets/**"
+      - "de/**"
+      - "en/**"
+      - ".github/workflows/deploy-sftp.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "sftp-deploy"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_ROOT: _deploy
+      SFTP_HOST: ${{ secrets.SFTP_HOST }}
+      SFTP_PORT: ${{ secrets.SFTP_PORT }}
+      SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+      SFTP_REMOTE_PATH: ${{ secrets.SFTP_REMOTE_PATH }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required secrets
+        run: |
+          set -euo pipefail
+          test -n "$SFTP_HOST"
+          test -n "$SFTP_USERNAME"
+          test -n "$SFTP_REMOTE_PATH"
+          test -n "${{ secrets.SFTP_PRIVATE_KEY }}"
+
+      - name: Prepare static files
+        run: |
+          set -euo pipefail
+          mkdir -p "$DEPLOY_ROOT"
+          cp index.html "$DEPLOY_ROOT/"
+          cp favicon.svg "$DEPLOY_ROOT/"
+          cp robots.txt "$DEPLOY_ROOT/"
+          cp sitemap.xml "$DEPLOY_ROOT/"
+          cp -R assets "$DEPLOY_ROOT/assets"
+          cp -R de "$DEPLOY_ROOT/de"
+          cp -R en "$DEPLOY_ROOT/en"
+
+      - name: Configure SSH
+        env:
+          SFTP_PRIVATE_KEY: ${{ secrets.SFTP_PRIVATE_KEY }}
+          SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SFTP_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+          if [ -n "$SFTP_KNOWN_HOSTS" ]; then
+            printf '%s\n' "$SFTP_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          else
+            ssh-keyscan -p "${SFTP_PORT:-22}" "$SFTP_HOST" > ~/.ssh/known_hosts
+          fi
+
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Ensure remote path exists
+        run: |
+          set -euo pipefail
+          ssh -i ~/.ssh/id_ed25519 \
+            -p "${SFTP_PORT:-22}" \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            "$SFTP_USERNAME@$SFTP_HOST" \
+            "mkdir -p '$SFTP_REMOTE_PATH'"
+
+      - name: Upload static files via SFTP
+        run: |
+          set -euo pipefail
+          sftp -i ~/.ssh/id_ed25519 \
+            -P "${SFTP_PORT:-22}" \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -b - \
+            "$SFTP_USERNAME@$SFTP_HOST" <<EOF
+          lcd $DEPLOY_ROOT
+          cd $SFTP_REMOTE_PATH
+          put index.html
+          put favicon.svg
+          put robots.txt
+          put sitemap.xml
+          put -r assets
+          put -r de
+          put -r en
+          bye
+          EOF
