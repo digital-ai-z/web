@@ -32,6 +32,7 @@ jobs:
       SFTP_HOST: ${{ secrets.SFTP_HOST }}
       SFTP_PORT: ${{ secrets.SFTP_PORT }}
       SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+      SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
       SFTP_REMOTE_PATH: ${{ secrets.SFTP_REMOTE_PATH }}
     steps:
       - name: Checkout
@@ -52,13 +53,19 @@ jobs:
       - name: Build bundled JS
         run: npm run build:js
 
+      - name: Install sshpass
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+
       - name: Validate required secrets
         run: |
           set -euo pipefail
           test -n "$SFTP_HOST"
           test -n "$SFTP_USERNAME"
+          test -n "$SFTP_PASSWORD"
           test -n "$SFTP_REMOTE_PATH"
-          test -n "${{ secrets.SFTP_PRIVATE_KEY }}"
 
       - name: Prepare static files
         run: |
@@ -74,14 +81,11 @@ jobs:
 
       - name: Configure SSH
         env:
-          SFTP_PRIVATE_KEY: ${{ secrets.SFTP_PRIVATE_KEY }}
           SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          printf '%s\n' "$SFTP_PRIVATE_KEY" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
 
           if [ -n "$SFTP_KNOWN_HOSTS" ]; then
             printf '%s\n' "$SFTP_KNOWN_HOSTS" > ~/.ssh/known_hosts
@@ -92,21 +96,23 @@ jobs:
           chmod 644 ~/.ssh/known_hosts
 
       - name: Ensure remote path exists
+        env:
+          SSHPASS: ${{ secrets.SFTP_PASSWORD }}
         run: |
           set -euo pipefail
-          ssh -i ~/.ssh/id_ed25519 \
+          sshpass -e ssh \
             -p "${SFTP_PORT:-22}" \
-            -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=yes \
             "$SFTP_USERNAME@$SFTP_HOST" \
             "mkdir -p '$SFTP_REMOTE_PATH'"
 
       - name: Upload static files via SFTP
+        env:
+          SSHPASS: ${{ secrets.SFTP_PASSWORD }}
         run: |
           set -euo pipefail
-          sftp -i ~/.ssh/id_ed25519 \
+          sshpass -e sftp \
             -P "${SFTP_PORT:-22}" \
-            -o IdentitiesOnly=yes \
             -o StrictHostKeyChecking=yes \
             -b - \
             "$SFTP_USERNAME@$SFTP_HOST" <<EOF
