@@ -102,6 +102,7 @@ jobs:
           set -euo pipefail
           sshpass -e ssh \
             -p "${SFTP_PORT:-22}" \
+            -o BatchMode=no \
             -o StrictHostKeyChecking=yes \
             "$SFTP_USERNAME@$SFTP_HOST" \
             "mkdir -p '$SFTP_REMOTE_PATH'"
@@ -113,6 +114,7 @@ jobs:
           set -euo pipefail
           sshpass -e sftp \
             -P "${SFTP_PORT:-22}" \
+            -o BatchMode=no \
             -o StrictHostKeyChecking=yes \
             -b - \
             "$SFTP_USERNAME@$SFTP_HOST" <<EOF
