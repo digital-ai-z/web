@@ -49,6 +49,9 @@ jobs:
       - name: Build bundled CSS
         run: npm run build:css
 
+      - name: Build bundled JS
+        run: npm run build:js
+
       - name: Validate required secrets
         run: |
           set -euo pipefail

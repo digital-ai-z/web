@@ -23,14 +23,14 @@ Corporate website for **Digital AI-Z GbR**, an IT consulting, software developme
 
 ## 🗂 Stack
 
-| Layer | Choice |
-|---|---|
-| Markup | HTML5 |
-| Styles | Vanilla CSS (custom properties, grid, flexbox) — split across focused files |
-| Scripts | Vanilla JS (modularized, zero dependencies) |
-| Fonts | System font stack (`-apple-system`, `BlinkMacSystemFont`, …) |
-| SEO | JSON-LD Structured Data, Canonical Tags, Sitemap, Robots.txt |
-| Privacy | No cookies, no tracking, no external frameworks |
+| Layer   | Choice                                                                      |
+|---------|-----------------------------------------------------------------------------|
+| Markup  | HTML5                                                                       |
+| Styles  | Vanilla CSS (custom properties, grid, flexbox) — split across focused files |
+| Scripts | Vanilla JS (modularized, zero dependencies)                                 |
+| Fonts   | System font stack (`-apple-system`, `BlinkMacSystemFont`, …)                |
+| SEO     | JSON-LD Structured Data, Canonical Tags, Sitemap, Robots.txt                |
+| Privacy | No cookies, no tracking, no external frameworks                             |
 
 Total footprint: **~80 KB uncompressed** (all assets and legal pages included).
 
@@ -58,6 +58,8 @@ Total footprint: **~80 KB uncompressed** (all assets and legal pages included).
 │   │   ├── menu.css         # Mobile hamburger menu
 │   │   └── responsive.css   # Breakpoint overrides
 │   ├── js/
+│   │   ├── site.js          # JS entry file with imports
+│   │   ├── site.min.js      # Bundled and minified script
 │   │   ├── main.js          # Nav scroll, hamburger menu, scroll-reveal, language link hashes
 │   │   ├── modal.js         # On-demand legal modal (Fetch API)
 │   │   └── gallery.js       # Auto-advancing card gallery with dot controls
@@ -65,8 +67,9 @@ Total footprint: **~80 KB uncompressed** (all assets and legal pages included).
 │       ├── *.png / *.svg    # Shared images, icons, and flags
 │       └── mobile/          # Optimised mobile variants of gallery images
 ├── scripts/
-│   └── build-css.mjs        # Bundles and minifies CSS with Lightning CSS
-├── package.json             # CSS build dependency and scripts
+│   ├── build-css.mjs        # Bundles and minifies CSS with Lightning CSS
+│   └── build-js.mjs         # Bundles and minifies JS with esbuild
+├── package.json             # Asset build dependencies and scripts
 ├── package-lock.json        # Locked dependency versions
 ├── favicon.svg
 ├── robots.txt               # Crawler instructions
@@ -158,12 +161,14 @@ To regenerate the bundled and minified stylesheet:
 ```bash
 npm install
 npm run build:css
+npm run build:js
 ```
 
-To rebuild automatically while editing CSS:
+To rebuild automatically while editing assets:
 
 ```bash
 npm run watch:css
+npm run watch:js
 ```
 
 ---
@@ -189,7 +194,7 @@ It uploads only the relevant static site files:
 - `de/`
 - `en/`
 
-Before upload, the workflow installs dependencies and rebuilds `assets/css/site.min.css`.
+Before upload, the workflow installs dependencies and rebuilds `assets/css/site.min.css` and `assets/js/site.min.js`.
 
 Configure these GitHub repository secrets before enabling the workflow:
 
