@@ -60,9 +60,9 @@
   display: none;
   position: fixed;
   top: 56px; left: 0; right: 0; bottom: 0;
-  background: rgba(8, 8, 14, 0.90);
-  backdrop-filter: saturate(180%) blur(32px);
-  -webkit-backdrop-filter: saturate(180%) blur(32px);
+  background: rgba(10,10,20,0.68);
+  backdrop-filter: saturate(160%) blur(48px);
+  -webkit-backdrop-filter: saturate(160%) blur(48px);
   border-top: 1px solid rgba(255,255,255,0.08);
   z-index: 99;
   flex-direction: column;
