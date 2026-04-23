@@ -5,12 +5,14 @@
   "scripts": {
     "build:css": "node scripts/build-css.mjs",
     "watch:css": "chokidar \"assets/css/*.css\" -i \"assets/css/site.min.css\" -c \"npm run build:css\"",
+    "build:images": "node scripts/build-images.mjs",
     "build:js": "node scripts/build-js.mjs",
     "watch:js": "chokidar \"assets/js/*.js\" -i \"assets/js/site.min.js\" -c \"npm run build:js\""
   },
   "devDependencies": {
     "chokidar-cli": "3.0.0",
     "esbuild": "0.25.11",
-    "lightningcss": "1.30.1"
+    "lightningcss": "1.30.1",
+    "sharp": "^0.34.5"
   }
 }
