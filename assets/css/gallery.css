@@ -93,29 +93,42 @@
 }
 
 .card-bg-1 {
+  --card-img: url('../images/it-consulting-futuristic.png');
   background:
     radial-gradient(ellipse at 30% 70%, rgba(30,58,95,var(--overlay-opacity)) 0%, rgba(10,22,40,var(--overlay-opacity)) 55%, rgba(5,13,26,var(--overlay-opacity)) 100%),
-    url('../images/it-consulting-futuristic.png') center / cover no-repeat;
+    var(--card-img) center / cover no-repeat;
 }
-.card-bg-2{
+.card-bg-2 {
+  --card-img: url('../images/code-example.png');
   background:
     radial-gradient(ellipse at 70% 30%, rgba(13,59,46,var(--overlay-opacity)) 0%, rgba(7,26,20,var(--overlay-opacity)) 55%, rgba(3,13,8,var(--overlay-opacity)) 100%),
-    url('../images/code-example.png') center / cover no-repeat;
+    var(--card-img) center / cover no-repeat;
 }
 .card-bg-3 {
+  --card-img: url('../images/futuristic-AI-brain.png');
   background:
     radial-gradient(ellipse at 50% 80%, rgba(45,27,105,var(--overlay-opacity)) 0%, rgba(21,11,53,var(--overlay-opacity)) 55%, rgba(8,3,24,var(--overlay-opacity)) 100%),
-    url('../images/futuristic-AI-brain.png') center / cover no-repeat;
+    var(--card-img) center / cover no-repeat;
 }
 .card-bg-4 {
+  --card-img: url('../images/digital-network-hub.png');
   background:
     radial-gradient(ellipse at 20% 60%, rgba(10,61,95,var(--overlay-opacity)) 0%, rgba(5,26,46,var(--overlay-opacity)) 55%, rgba(2,13,24,var(--overlay-opacity)) 100%),
-    url('../images/digital-network-hub.png') center / cover no-repeat;
+    var(--card-img) center / cover no-repeat;
 }
 .card-bg-5 {
+  --card-img: url('../images/financial-growth-digital-data.png');
   background:
     radial-gradient(ellipse at 75% 40%, rgba(61,31,0,var(--overlay-opacity)) 0%, rgba(26,14,0,var(--overlay-opacity)) 55%, rgba(13,6,0,var(--overlay-opacity)) 100%),
-    url('../images/financial-growth-digital-data.png') center / cover no-repeat;
+    var(--card-img) center / cover no-repeat;
+}
+
+@supports (background-image: image-set('' type('image/webp'))) {
+  .card-bg-1 { --card-img: url('../images/it-consulting-futuristic.webp'); }
+  .card-bg-2 { --card-img: url('../images/code-example.webp'); }
+  .card-bg-3 { --card-img: url('../images/futuristic-AI-brain.webp'); }
+  .card-bg-4 { --card-img: url('../images/digital-network-hub.webp'); }
+  .card-bg-5 { --card-img: url('../images/financial-growth-digital-data.webp'); }
 }
 
 .gallery-controls {
@@ -186,28 +199,41 @@
   .gallery-track { gap: 14px; }
   .gallery-card-content h3 { font-size: clamp(28px, 8vw, 42px); }
   .card-bg-1 {
+    --card-img: url('../images/mobile/it-consulting-futuristic-mobile.png');
     background:
       radial-gradient(ellipse at 30% 70%, rgba(30,58,95,var(--overlay-opacity)) 0%, rgba(10,22,40,var(--overlay-opacity)) 55%, rgba(5,13,26,var(--overlay-opacity)) 100%),
-      url('../images/mobile/it-consulting-futuristic-mobile.png') center / cover no-repeat;
+      var(--card-img) center / cover no-repeat;
   }
   .card-bg-2 {
+    --card-img: url('../images/mobile/code-example-mobile.png');
     background:
       radial-gradient(ellipse at 70% 30%, rgba(13,59,46,var(--overlay-opacity)) 0%, rgba(7,26,20,var(--overlay-opacity)) 55%, rgba(3,13,8,var(--overlay-opacity)) 100%),
-      url('../images/mobile/code-example-mobile.png') center / cover no-repeat;
+      var(--card-img) center / cover no-repeat;
   }
   .card-bg-3 {
+    --card-img: url('../images/mobile/futuristic-AI-brain-mobile.png');
     background:
       radial-gradient(ellipse at 50% 80%, rgba(45,27,105,var(--overlay-opacity)) 0%, rgba(21,11,53,var(--overlay-opacity)) 55%, rgba(8,3,24,var(--overlay-opacity)) 100%),
-      url('../images/mobile/futuristic-AI-brain-mobile.png') center / cover no-repeat;
+      var(--card-img) center / cover no-repeat;
   }
   .card-bg-4 {
+    --card-img: url('../images/mobile/digital-network-hub-mobile.png');
     background:
       radial-gradient(ellipse at 20% 60%, rgba(10,61,95,var(--overlay-opacity)) 0%, rgba(5,26,46,var(--overlay-opacity)) 55%, rgba(2,13,24,var(--overlay-opacity)) 100%),
-      url('../images/mobile/digital-network-hub-mobile.png') center / cover no-repeat;
+      var(--card-img) center / cover no-repeat;
   }
   .card-bg-5 {
+    --card-img: url('../images/mobile/financial-growth-digital-data-mobile.png');
     background:
       radial-gradient(ellipse at 75% 40%, rgba(61,31,0,var(--overlay-opacity)) 0%, rgba(26,14,0,var(--overlay-opacity)) 55%, rgba(13,6,0,var(--overlay-opacity)) 100%),
-      url('../images/mobile/financial-growth-digital-data-mobile.png') center / cover no-repeat;
+      var(--card-img) center / cover no-repeat;
+  }
+
+  @supports (background-image: image-set('' type('image/webp'))) {
+    .card-bg-1 { --card-img: url('../images/mobile/it-consulting-futuristic-mobile.webp'); }
+    .card-bg-2 { --card-img: url('../images/mobile/code-example-mobile.webp'); }
+    .card-bg-3 { --card-img: url('../images/mobile/futuristic-AI-brain-mobile.webp'); }
+    .card-bg-4 { --card-img: url('../images/mobile/digital-network-hub-mobile.webp'); }
+    .card-bg-5 { --card-img: url('../images/mobile/financial-growth-digital-data-mobile.webp'); }
   }
 }

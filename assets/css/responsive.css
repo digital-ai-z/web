@@ -95,6 +95,11 @@
     .visual-card::before {
         background-image: url('../images/mobile/collaboration-mobile.png');
     }
+    @supports (background-image: image-set('' type('image/webp'))) {
+        .visual-card::before {
+            background-image: url('../images/mobile/collaboration-mobile.webp');
+        }
+    }
 
     #cta {
         padding: 110px 20px 94px;
